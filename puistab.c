@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+char tokens[]="ox";
+int joueur=0;
+
 #define NBL 6
 #define NBC 7
 
@@ -12,6 +15,7 @@ void init(void) {
     }
   }
 }
+int t;
 int n;
 int main(void)
 {
@@ -28,6 +32,13 @@ int main(void)
  {
   printf("%d ", n);
  }
+  for(t=0; t<=3; t++)
+  {
+    joueur=!joueur;
+    tokens[0]= 'o';
+    tokens[1]= 'x';
+    printf("%c",tokens[joueur]);
+  }
 printf("\n");
   return 0;
 }
